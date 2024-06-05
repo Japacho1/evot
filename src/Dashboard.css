@@ -1,0 +1,127 @@
+/* src/Dashboard.css */
+body {
+  background: url("/public/images/dashboard-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(13, 80, 92); /* Adjust as necessary */
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: left;
+  color: rgb(160, 234, 240);
+  text-decoration: none;
+  position: absolute; /* Absolute positioning to center */
+  left: 5%;
+  transform: translateX(-50%);
+  font-size: large;
+}
+
+.container-xl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navmenu {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  flex-grow: 1;
+}
+
+.navmenu ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 40px;
+}
+
+.navmenu li {
+  margin-left: 20px; /* Use margin-left to ensure spacing */
+}
+
+.navmenu li:not(:last-child) {
+  border-right: 1px solid white;
+}
+
+.navmenu a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.navmenu a:hover {
+  background-color: #575757; /* Adjust as necessary */
+  border-radius: 4px;
+}
+
+.mobile-nav-toggle {
+  display: none; /* Hide the toggle button by default */
+  cursor: pointer; /* Change cursor to pointer for the toggle button */
+}
+
+@media (max-width: 768px) {
+  .mobile-nav-toggle {
+    display: block; /* Show the toggle button on smaller screens */
+  }
+
+  .navmenu {
+    display: none; /* Hide the navmenu by default on smaller screens */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on your header height */
+    left: 0;
+    width: 100%;
+    background-color: rgb(13, 80, 92); /* Match your header background */
+  }
+
+  .navmenu.active {
+    display: flex; /* Show the navmenu when active */
+  }
+
+  .navmenu ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navmenu li {
+    margin: 10px 0;
+    text-align: center;
+    border: none; /* Remove borders for mobile view */
+  }
+
+  .navmenu li:not(:last-child) {
+    border-bottom: 1px solid white;
+  }
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
