@@ -22,7 +22,7 @@ const Dashboard = () => {
           </a>
           <nav id="navmenu" className={`navmenu ${isNavOpen ? 'active' : ''}`}>
             <ul>
-              <li><a href="#hero">Home</a></li>
+              
               <li><a href="#about">About</a></li>
               <li><a href="#services">Profile</a></li>
               <li><a href="#portfolio">Vote</a></li>
